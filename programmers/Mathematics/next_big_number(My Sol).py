@@ -37,3 +37,23 @@ def changeToBinary(n):
 
 
 print(solution(78))
+
+
+# format 함수 #https://brownbears.tistory.com/467
+
+
+# 진법 변환하기(2~16) - 인터넷에서 주워옴..
+# NOTATION = '0123456789ABCDEF'
+# def numeral_system(number, base):
+#     q, r = divmod(number, base)
+#     n = NOTATION[r]
+#     return numeral_system(q, base) + n if q else n
+
+# def solution(n):
+#     answer = 0
+#     one_cnt = numeral_system(n, 2).count('1')
+#     for i in range(n+1, 1000001):  # 범위는 2n+1까지만 잡아줘도 된다고 함 -> break문 때문에 상관없긴 할듯
+#         if one_cnt == numeral_system(i, 2).count('1'):
+#             answer = i
+#             break
+#     return answer

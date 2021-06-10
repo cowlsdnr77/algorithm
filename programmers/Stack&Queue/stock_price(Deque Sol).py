@@ -25,3 +25,22 @@ def solution(prices):
 
 
 print(solution(prices))
+
+
+# 은진님 코드
+# from collections import deque
+# def solution(prices):
+#     answer = []
+
+#     prices = deque(prices) # que로 캐스팅
+#     while prices:
+#         cnt = 0
+#         price = prices.popleft() # First Out
+
+#         for i in prices:
+#             cnt += 1 # 카운팅
+#             if price > i:
+#                 break
+
+#         answer.append(cnt)
+#     return answer
