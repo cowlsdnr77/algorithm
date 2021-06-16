@@ -29,6 +29,8 @@ def solution2(n):
 
 
 # 재귀 풀이 (런타임에러: 시간 초과)
+# import sys -> 런타임에러 안뜰듯
+# sys.setrecursionlimit(60000)
 def recursion(n):
     if n == 1 or n == 2:
         return dp[n]
