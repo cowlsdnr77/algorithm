@@ -76,4 +76,12 @@ def solution2(n, words):
     return [0, 0]
 
 
-print(solution(n, words))
+def solution3(n, words):
+    for p in range(1, len(words)):
+        # words[:p] => words[0]부터 words[p-1]까지
+        if words[p][0] != words[p-1][-1] or words[p] in words[:p]:
+            return [(p % n)+1, (p//n)+1]
+    else:
+        return [0, 0]
+
+# print(solution(n, words))
