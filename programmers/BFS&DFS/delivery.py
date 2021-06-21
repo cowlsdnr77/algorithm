@@ -111,12 +111,13 @@ def dijkstra3(start, road, distance):  # 참고한 코드 # https://greedysiru.t
                     distance[prev] = cost
                     heapq.heappush(q, (cost, prev))
     return distance
+
 # N: 마을의 수
 # road: 도로의 정보가 쓰인 2차원 배열 각 요소의 인덱스는 [0]: 출발마을 [1]: 도착마을 [2]: 걸리는 시간
 # 배달이 가능한 K이하의 시간
 
 
-def solution(N, road, K):
+def solution2(N, road, K):
     answer = 0
     # 처음의 시작 마을 번호
     start = 1
@@ -131,4 +132,4 @@ def solution(N, road, K):
     return answer
 
 
-print(solution(N, road, K))
+print(solution2(N, road, K))
