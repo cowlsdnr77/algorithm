@@ -36,7 +36,7 @@ def dijkstra2(time, graph):  # 힙 사용했지만 정확성 70% -> 어디가 �
     q = []
 
     heapq.heappush(q, (0, 1))
-    time[0] = 0
+    time[1] = 0
 
     while q:
         dist, now = heapq.heappop(q)
@@ -59,6 +59,10 @@ def solution(N, road, K):
     for i in range(len(road)):  # graph에 경로 정보 추가
         graph[road[i][0]].append([road[i][1], road[i][2]])
         graph[road[i][1]].append([road[i][0], road[i][2]])
+
+    # for a,b,c in road: # 이게 graph 경로 넣을때 가독성 up
+    #     graph[a].append([b, c])
+    #     graph[b].append([a, c])
 
     print(graph)
 

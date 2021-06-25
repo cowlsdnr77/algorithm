@@ -29,7 +29,8 @@ def solution(n, words):  # 내 풀이
             else:  # 탈락자 번호가 n이 아닌 경우
                 answer.append((i+1) % n)  # 나머지를 통해 탈락자 번호를 구할 수 있음
 
-            answer.append(math.ceil((i+1)/n))  # 탈락자의 몇번째 차례에 탈락하는지 구하는 부분
+            # 탈락자의 몇번째 차례에 탈락하는지 구하는 부분  # 올림: int + 1
+            answer.append(math.ceil((i+1)/n))
             return answer
         else:
             word_list.append(words[i])
