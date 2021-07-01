@@ -55,7 +55,8 @@ def solution(expression):
                 else:  # stack 맨 위가 현재 연산자가 아니라면
                     stack.append(temp_list[i])
             print("stack: ", stack)
-            temp_list = stack  # 연산자 우선순위 대로 계산하고 나온 나머지가 stack에 저장되어 있으므로 반복문을 도는 temp_list를 stack으로 바꿔줌
+            # 연산자 우선순위 대로 계산하고 나온 나머지 식이 stack에 저장되어 있으므로 반복문을 도는 temp_list를 stack으로 바꿔줌
+            temp_list = stack
             stack = []  # stack은 연산자 우선순위 대로 계산할때 마다 필요하므로 초기화
             print("temp_list: ", temp_list)
         # 현재 연산자 우선순위대로 나온 최종 결과값을 절대값 변환해서 sum_list에 저장
