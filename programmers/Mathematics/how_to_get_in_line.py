@@ -24,7 +24,7 @@ def solution(n, k):
             return list(order_list[i])
 
 
-def solution2(n, k):
+def solution2(n, k):  # https://velog.io/@ansrjsdn/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-level3-%EC%A4%84-%EC%84%9C%EB%8A%94-%EB%B0%A9%EB%B2%95-Python
     answer = []
     numberList = [i for i in range(1, n+1)]
     while (n != 0):
