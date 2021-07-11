@@ -50,6 +50,7 @@ def confirm_p(place, p):  # 테스트케이스 8번 빼고 모두 성공... 8번
 
 
 def confirm_p2(place, p):  # confirm_p3을 토대로 내 로직을 바꿈
+    # 이 부분이 포인트이다. -> 이걸 통해서 거리값을 비교하고 반복문의 탈출조건을 만들어줌
     visited = [[0] * 5 for _ in range(5)]
     visited[p[0]][p[1]] = 1
     queue = [p]
